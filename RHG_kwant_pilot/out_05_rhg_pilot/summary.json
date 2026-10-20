@@ -1,0 +1,1132 @@
+{
+ "run_mode": "pilot",
+ "mumps": true,
+ "kwant": "1.5.0",
+ "LR": {
+  "r_in": 0.45,
+  "r_out": 1.35,
+  "q": 0.9,
+  "D0": 1.0,
+  "chi": -1.0,
+  "Qx": 0.135
+ },
+ "PAPER": {
+  "r_in": 0.2,
+  "r_out": 0.55,
+  "q": 0.35,
+  "D0": 2.0,
+  "chi": -1.0
+ },
+ "POINTS": {
+  "G": 1.0,
+  "P1": 2.2,
+  "P2": 2.5,
+  "P3": 3.0,
+  "P4": 4.0
+ },
+ "V17_reproduction": {
+  "ref_point": {
+   "C": 2.0,
+   "maxF": 0.15501815878690814,
+   "delta_BdG": -0.003132761585521133,
+   "eta_min": 0.011187641591034424,
+   "pocket_area_frac": 0.0001037339914678792
+  },
+  "map_C_values": [
+   2.0
+  ],
+  "map_gapped_fraction": 0.4533333333333333
+ },
+ "scales": {
+  "E_F": 0.6560999929745085,
+  "v_F": 2.6306330161896345,
+  "eta_min": 0.2654193508928406,
+  "xi_SC": 9.911232950199311,
+  "nu_N_per_site": 0.10049806063659844,
+  "w_c": 2.089434476671244
+ },
+ "points_kspace": [
+  {
+   "point": "G",
+   "w": 1.0,
+   "C_band": 2.0,
+   "delta_BdG": 0.16299628294932827,
+   "n_pockets": 0,
+   "k_p": 0.0,
+   "lambda_p": Infinity,
+   "pocket_angles": [],
+   "blocking_T0": 2.0,
+   "pocket_curvature": 0.0
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "C_band": 2.0,
+   "delta_BdG": -0.03661756771918889,
+   "n_pockets": 2,
+   "k_p": 0.07312732791431296,
+   "lambda_p": 85.92116635988555,
+   "pocket_angles": [
+    -180,
+    0
+   ],
+   "blocking_T0": 1.908941179095265,
+   "pocket_curvature": 0.09105882090473506
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "C_band": 2.0,
+   "delta_BdG": -0.13759785678224973,
+   "n_pockets": 2,
+   "k_p": 0.1440065591730914,
+   "lambda_p": 43.63124390485153,
+   "pocket_angles": [
+    -180,
+    0
+   ],
+   "blocking_T0": 1.7115245841535633,
+   "pocket_curvature": 0.2884754158464368
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "C_band": 2.0,
+   "delta_BdG": -0.3117696722251199,
+   "n_pockets": 2,
+   "k_p": 0.2216554328963448,
+   "lambda_p": 28.346633443980878,
+   "pocket_angles": [
+    -180,
+    0
+   ],
+   "blocking_T0": 1.4848140383678354,
+   "pocket_curvature": 0.5151859616321642
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "C_band": 2.0,
+   "delta_BdG": -0.6851336453036058,
+   "n_pockets": 2,
+   "k_p": 0.33616657677763784,
+   "lambda_p": 18.690690095986813,
+   "pocket_angles": [
+    -180,
+    0
+   ],
+   "blocking_T0": 1.221942486051331,
+   "pocket_curvature": 0.7780575139486688
+  }
+ ],
+ "validation": {
+  "fourier": {
+   "max_err": 1.4210963135005665e-14,
+   "normal_range": 2,
+   "pairing_range": 3,
+   "n_normal": 19,
+   "n_pairing": 36,
+   "pairing_oddness": 1.1443916996305594e-16
+  },
+  "torus_vs_bloch_G": 8.171241461241152e-14,
+  "torus_vs_bloch_P2": 1.1723955140041653e-13,
+  "gauge_vs_lab": 1.8509056803647475e-15
+ },
+ "benchmarks": [
+  {
+   "benchmark": "strip, metal leads: T = |C| (edges)",
+   "value": 2.0011365596130877,
+   "expected": 2.0
+  },
+  {
+   "benchmark": "cylinder: insulating bulk",
+   "value": 0.002080039913759795,
+   "expected": 0.0
+  },
+  {
+   "benchmark": "cylinder, two sharp walls: T = 2|C|",
+   "value": 3.998569386479458,
+   "expected": 4.0
+  },
+  {
+   "benchmark": "normal limit (D0=0): T = number of Nambu modes",
+   "value": 20.000000000000178,
+   "expected": NaN
+  },
+  {
+   "benchmark": "scattering Chern number, chi=-1",
+   "value": 2.0,
+   "expected": 2.0
+  },
+  {
+   "benchmark": "   min_phi |det r|, chi=-1",
+   "value": 0.9995122642707073,
+   "expected": 1.0
+  },
+  {
+   "benchmark": "scattering Chern number, chi=+1",
+   "value": -2.0,
+   "expected": -2.0
+  },
+  {
+   "benchmark": "   min_phi |det r|, chi=+1",
+   "value": 0.9995122642706521,
+   "expected": 1.0
+  },
+  {
+   "benchmark": "Bott index (torus 16)",
+   "value": -1.9999999999999951,
+   "expected": -2.0
+  }
+ ],
+ "Q_clean": 2,
+ "bott_sign": -1,
+ "bridge_kspace": {
+  "identity_max_dev": {
+   "G": 0.009770123677534048,
+   "P1": 0.009082995030083918,
+   "P2": 0.008196006783111498,
+   "P3": 0.007000567652239109,
+   "P4": 0.0060052153850493895
+  },
+  "bound_holds": true,
+  "T0": {
+   "G": 2.0,
+   "P1": 1.908941179095265,
+   "P2": 1.7115245841535633,
+   "P3": 1.4848140383678354,
+   "P4": 1.221942486051331
+  }
+ },
+ "bridge_kpm": {
+  "anchor_raw": [
+   -1.0061499888677812,
+   -1.0061478818698946
+  ],
+  "sign": -1.0,
+  "resolution": 0.041507615511491174,
+  "s0": {
+   "G": [
+    2.0134341254849004,
+    0.03132350592613458
+   ],
+   "P2": [
+    0.5761908449309842,
+    0.32328379089953185
+   ]
+  },
+  "s0_kspace": {
+   "G": 1.9999999999999851,
+   "P2": 1.711524584153582
+  }
+ },
+ "calibration": {
+  "slopes": {
+   "metal: mu=4t, U=3t, D=t": [
+    0.09332674526023622,
+    0.17042477639594072
+   ],
+   "metal: mu=4t, U=3t, D=t/2": [
+    0.3378530184618393,
+    0.13313427041398043
+   ],
+   "insulator: mu=2t, U=t, D=t": [
+    -4.21579932227693e-28,
+    5.730743424041633e-29
+   ]
+  },
+  "metal_slope_ref": 0.21558988186103775,
+  "g_by_L": "{('insulator: mu=2t, U=t, D=t', 16): 0.0, ('insulator: mu=2t, U=t, D=t', 24): 0.0, ('insulator: mu=2t, U=t, D=t', 40): 0.0, ('insulator: mu=2t, U=t, D=t', 64): 0.0, ('insulator: mu=2t, U=t, D=t', 96): 0.0, ('insulator: mu=2t, U=t, D=t', 128): 0.0, ('metal: mu=4t, U=3t, D=t', 16): 1.5831, ('metal: mu=4t, U=3t, D=t', 24): 1.7262, ('metal: mu=4t, U=3t, D=t', 40): 1.7747, ('metal: mu=4t, U=3t, D=t', 64): 2.0147, ('metal: mu=4t, U=3t, D=t', 96): 2.0704, ('metal: mu=4t, U=3t, D=t', 128): 2.0772, ('metal: mu=4t, U=3t, D=t/2', 16): 1.9657, ('metal: mu=4t, U=3t, D=t/2', 24): 2.1652, ('metal: mu=4t, U=3t, D=t/2', 40): 2.2234, ('metal: mu=4t, U=3t, D=t/2', 64): 2.3097, ('metal: mu=4t, U=3t, D=t/2', 96): 2.4664, ('metal: mu=4t, U=3t, D=t/2', 128): 2.5415}"
+ },
+ "classification": [
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 0.0,
+   "ell_Born": Infinity,
+   "L_over_ell": 0.0,
+   "g_Lmax": 0.0,
+   "slope_lnL": NaN,
+   "slope_err": NaN,
+   "lng_drop": -16.11598,
+   "f_Q": 1.0,
+   "Q_mode": 2.0,
+   "rho0": 0.00021,
+   "rho0_excess": 0.0,
+   "zero_levels_torus": 0.0,
+   "label": "gapped, quantized"
+  },
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 0.25,
+   "ell_Born": 199.96959,
+   "L_over_ell": 0.80012,
+   "g_Lmax": 0.0,
+   "slope_lnL": -0.0,
+   "slope_err": 0.0,
+   "lng_drop": -16.10092,
+   "f_Q": 1.0,
+   "Q_mode": 2.0,
+   "rho0": 0.00025,
+   "rho0_excess": 4e-05,
+   "zero_levels_torus": 0.0,
+   "label": "gapped, quantized"
+  },
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 0.5,
+   "ell_Born": 49.9924,
+   "L_over_ell": 3.20049,
+   "g_Lmax": 0.0,
+   "slope_lnL": -0.0,
+   "slope_err": 0.0,
+   "lng_drop": -16.05906,
+   "f_Q": 1.0,
+   "Q_mode": 2.0,
+   "rho0": 0.00027,
+   "rho0_excess": 6e-05,
+   "zero_levels_torus": 0.0,
+   "label": "gapped, quantized"
+  },
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 1.0,
+   "ell_Born": 12.4981,
+   "L_over_ell": 12.80195,
+   "g_Lmax": 0.0,
+   "slope_lnL": -0.0,
+   "slope_err": 0.0,
+   "lng_drop": -15.86663,
+   "f_Q": 1.0,
+   "Q_mode": 2.0,
+   "rho0": 0.00034,
+   "rho0_excess": 0.00013,
+   "zero_levels_torus": 0.0,
+   "label": "gapped, quantized"
+  },
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 1.5,
+   "ell_Born": 5.55471,
+   "L_over_ell": 28.80438,
+   "g_Lmax": 0.0,
+   "slope_lnL": -0.0,
+   "slope_err": 0.0,
+   "lng_drop": -15.24504,
+   "f_Q": 1.0,
+   "Q_mode": 2.0,
+   "rho0": 0.00128,
+   "rho0_excess": 0.00107,
+   "zero_levels_torus": 0.0,
+   "label": "gapped, quantized"
+  },
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 2.0,
+   "ell_Born": 3.12452,
+   "L_over_ell": 51.20779,
+   "g_Lmax": 0.0,
+   "slope_lnL": -1e-05,
+   "slope_err": 1e-05,
+   "lng_drop": -11.60965,
+   "f_Q": 1.0,
+   "Q_mode": 2.0,
+   "rho0": 0.02778,
+   "rho0_excess": 0.02757,
+   "zero_levels_torus": 0.0,
+   "label": "gapless (disorder tails), quantized"
+  },
+  {
+   "point": "G",
+   "w": 1.0,
+   "U": 3.0,
+   "ell_Born": 1.38868,
+   "L_over_ell": 115.21752,
+   "g_Lmax": 1.38245,
+   "slope_lnL": 0.08245,
+   "slope_err": 0.17597,
+   "lng_drop": 0.00516,
+   "f_Q": 0.33333,
+   "Q_mode": 2.0,
+   "rho0": 0.29469,
+   "rho0_excess": 0.29448,
+   "zero_levels_torus": 4.25,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 0.0,
+   "ell_Born": Infinity,
+   "L_over_ell": 0.0,
+   "g_Lmax": 1.1004,
+   "slope_lnL": NaN,
+   "slope_err": NaN,
+   "lng_drop": -0.24804,
+   "f_Q": 0.0,
+   "Q_mode": 0.0,
+   "rho0": 0.09929,
+   "rho0_excess": 0.09908,
+   "zero_levels_torus": 0.0,
+   "label": "clean ballistic (H3)"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 0.25,
+   "ell_Born": 199.96959,
+   "L_over_ell": 0.80012,
+   "g_Lmax": 1.12508,
+   "slope_lnL": -0.48683,
+   "slope_err": 0.02156,
+   "lng_drop": -0.26831,
+   "f_Q": 0.0,
+   "Q_mode": 0.0,
+   "rho0": 0.10058,
+   "rho0_excess": 0.10037,
+   "zero_levels_torus": 0.0,
+   "label": "quasi-ballistic (L < 3 l)"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 0.5,
+   "ell_Born": 49.9924,
+   "L_over_ell": 3.20049,
+   "g_Lmax": 1.21539,
+   "slope_lnL": -0.73648,
+   "slope_err": 0.08453,
+   "lng_drop": -0.32097,
+   "f_Q": 0.0,
+   "Q_mode": 2.0,
+   "rho0": 0.10034,
+   "rho0_excess": 0.10013,
+   "zero_levels_torus": 0.0,
+   "label": "crossover"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 1.0,
+   "ell_Born": 12.4981,
+   "L_over_ell": 12.80195,
+   "g_Lmax": 2.01763,
+   "slope_lnL": -0.37435,
+   "slope_err": 0.25461,
+   "lng_drop": -0.10455,
+   "f_Q": 0.0,
+   "Q_mode": 2.0,
+   "rho0": 0.10982,
+   "rho0_excess": 0.10961,
+   "zero_levels_torus": 0.0,
+   "label": "crossover"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 1.5,
+   "ell_Born": 5.55471,
+   "L_over_ell": 28.80438,
+   "g_Lmax": 2.65056,
+   "slope_lnL": 1.64776,
+   "slope_err": 0.27723,
+   "lng_drop": 0.40399,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.145,
+   "rho0_excess": 0.14479,
+   "zero_levels_torus": 0.75,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 2.0,
+   "ell_Born": 3.12452,
+   "L_over_ell": 51.20779,
+   "g_Lmax": 1.88856,
+   "slope_lnL": 0.54636,
+   "slope_err": 0.23557,
+   "lng_drop": 0.17913,
+   "f_Q": 0.41667,
+   "Q_mode": 2.0,
+   "rho0": 0.22505,
+   "rho0_excess": 0.22484,
+   "zero_levels_torus": 2.25,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P1",
+   "w": 2.2,
+   "U": 3.0,
+   "ell_Born": 1.38868,
+   "L_over_ell": 115.21752,
+   "g_Lmax": 2.44958,
+   "slope_lnL": 0.56629,
+   "slope_err": 0.26236,
+   "lng_drop": 0.11256,
+   "f_Q": 0.0,
+   "Q_mode": 2.0,
+   "rho0": 0.33348,
+   "rho0_excess": 0.33327,
+   "zero_levels_torus": 4.75,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 0.0,
+   "ell_Born": Infinity,
+   "L_over_ell": 0.0,
+   "g_Lmax": 11.46201,
+   "slope_lnL": NaN,
+   "slope_err": NaN,
+   "lng_drop": 0.51313,
+   "f_Q": 0.0,
+   "Q_mode": -2.0,
+   "rho0": 0.09752,
+   "rho0_excess": 0.09731,
+   "zero_levels_torus": 0.0,
+   "label": "clean ballistic (H3)"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 0.25,
+   "ell_Born": 199.96959,
+   "L_over_ell": 0.80012,
+   "g_Lmax": 11.13382,
+   "slope_lnL": 7.91918,
+   "slope_err": 0.05806,
+   "lng_drop": 0.48599,
+   "f_Q": 0.0,
+   "Q_mode": -2.0,
+   "rho0": 0.11703,
+   "rho0_excess": 0.11682,
+   "zero_levels_torus": 0.0,
+   "label": "quasi-ballistic (L < 3 l)"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 0.5,
+   "ell_Born": 49.9924,
+   "L_over_ell": 3.20049,
+   "g_Lmax": 10.42978,
+   "slope_lnL": 6.74656,
+   "slope_err": 0.10955,
+   "lng_drop": 0.42804,
+   "f_Q": 0.0,
+   "Q_mode": -1.0,
+   "rho0": 0.12216,
+   "rho0_excess": 0.12195,
+   "zero_levels_torus": 0.0,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 1.0,
+   "ell_Born": 12.4981,
+   "L_over_ell": 12.80195,
+   "g_Lmax": 8.48795,
+   "slope_lnL": 4.30027,
+   "slope_err": 0.21238,
+   "lng_drop": 0.3101,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.14503,
+   "rho0_excess": 0.14482,
+   "zero_levels_torus": 1.5,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 1.5,
+   "ell_Born": 5.55471,
+   "L_over_ell": 28.80438,
+   "g_Lmax": 5.70015,
+   "slope_lnL": 2.31308,
+   "slope_err": 0.2482,
+   "lng_drop": 0.23605,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.19592,
+   "rho0_excess": 0.19571,
+   "zero_levels_torus": 1.5,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 2.0,
+   "ell_Born": 3.12452,
+   "L_over_ell": 51.20779,
+   "g_Lmax": 3.46513,
+   "slope_lnL": 0.50736,
+   "slope_err": 0.21541,
+   "lng_drop": 0.07937,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.26591,
+   "rho0_excess": 0.2657,
+   "zero_levels_torus": 2.75,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P2",
+   "w": 2.5,
+   "U": 3.0,
+   "ell_Born": 1.38868,
+   "L_over_ell": 115.21752,
+   "g_Lmax": 2.70832,
+   "slope_lnL": 0.22647,
+   "slope_err": 0.17468,
+   "lng_drop": 0.03954,
+   "f_Q": 0.0,
+   "Q_mode": 2.0,
+   "rho0": 0.36116,
+   "rho0_excess": 0.36094,
+   "zero_levels_torus": 4.75,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 0.0,
+   "ell_Born": Infinity,
+   "L_over_ell": 0.0,
+   "g_Lmax": 19.08732,
+   "slope_lnL": NaN,
+   "slope_err": NaN,
+   "lng_drop": 0.65769,
+   "f_Q": 0.0,
+   "Q_mode": 0.0,
+   "rho0": 0.1253,
+   "rho0_excess": 0.12509,
+   "zero_levels_torus": 4.0,
+   "label": "clean ballistic (H3)"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 0.25,
+   "ell_Born": 199.96959,
+   "L_over_ell": 0.80012,
+   "g_Lmax": 18.62588,
+   "slope_lnL": 17.09118,
+   "slope_err": 0.03616,
+   "lng_drop": 0.63475,
+   "f_Q": 0.0,
+   "Q_mode": -3.0,
+   "rho0": 0.13305,
+   "rho0_excess": 0.13284,
+   "zero_levels_torus": 4.0,
+   "label": "quasi-ballistic (L < 3 l)"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 0.5,
+   "ell_Born": 49.9924,
+   "L_over_ell": 3.20049,
+   "g_Lmax": 17.13848,
+   "slope_lnL": 14.37087,
+   "slope_err": 0.10497,
+   "lng_drop": 0.56001,
+   "f_Q": 0.0,
+   "Q_mode": -2.0,
+   "rho0": 0.13657,
+   "rho0_excess": 0.13636,
+   "zero_levels_torus": 3.25,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 1.0,
+   "ell_Born": 12.4981,
+   "L_over_ell": 12.80195,
+   "g_Lmax": 12.47663,
+   "slope_lnL": 7.3019,
+   "slope_err": 0.22636,
+   "lng_drop": 0.35234,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.15303,
+   "rho0_excess": 0.15282,
+   "zero_levels_torus": 2.0,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 1.5,
+   "ell_Born": 5.55471,
+   "L_over_ell": 28.80438,
+   "g_Lmax": 7.73438,
+   "slope_lnL": 2.74533,
+   "slope_err": 0.26235,
+   "lng_drop": 0.19717,
+   "f_Q": 0.0,
+   "Q_mode": 0.0,
+   "rho0": 0.20347,
+   "rho0_excess": 0.20326,
+   "zero_levels_torus": 3.0,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 2.0,
+   "ell_Born": 3.12452,
+   "L_over_ell": 51.20779,
+   "g_Lmax": 4.65499,
+   "slope_lnL": 0.62074,
+   "slope_err": 0.28816,
+   "lng_drop": 0.06508,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.2805,
+   "rho0_excess": 0.28029,
+   "zero_levels_torus": 3.5,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P3",
+   "w": 3.0,
+   "U": 3.0,
+   "ell_Born": 1.38868,
+   "L_over_ell": 115.21752,
+   "g_Lmax": 3.10422,
+   "slope_lnL": 0.30264,
+   "slope_err": 0.26016,
+   "lng_drop": 0.05049,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.41085,
+   "rho0_excess": 0.41064,
+   "zero_levels_torus": 4.75,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 0.0,
+   "ell_Born": Infinity,
+   "L_over_ell": 0.0,
+   "g_Lmax": 32.2155,
+   "slope_lnL": NaN,
+   "slope_err": NaN,
+   "lng_drop": 0.53981,
+   "f_Q": 0.0,
+   "Q_mode": -2.0,
+   "rho0": 0.20779,
+   "rho0_excess": 0.20758,
+   "zero_levels_torus": 8.0,
+   "label": "clean ballistic (H3)"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 0.25,
+   "ell_Born": 199.96959,
+   "L_over_ell": 0.80012,
+   "g_Lmax": 30.42474,
+   "slope_lnL": 23.29715,
+   "slope_err": 0.08835,
+   "lng_drop": 0.50373,
+   "f_Q": 0.0,
+   "Q_mode": -2.0,
+   "rho0": 0.18256,
+   "rho0_excess": 0.18235,
+   "zero_levels_torus": 6.5,
+   "label": "quasi-ballistic (L < 3 l)"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 0.5,
+   "ell_Born": 49.9924,
+   "L_over_ell": 3.20049,
+   "g_Lmax": 26.68919,
+   "slope_lnL": 18.63189,
+   "slope_err": 0.16647,
+   "lng_drop": 0.44549,
+   "f_Q": 0.0,
+   "Q_mode": 0.0,
+   "rho0": 0.18198,
+   "rho0_excess": 0.18177,
+   "zero_levels_torus": 4.5,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 1.0,
+   "ell_Born": 12.4981,
+   "L_over_ell": 12.80195,
+   "g_Lmax": 17.79441,
+   "slope_lnL": 9.71541,
+   "slope_err": 0.27883,
+   "lng_drop": 0.3261,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.20185,
+   "rho0_excess": 0.20164,
+   "zero_levels_torus": 4.0,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 1.5,
+   "ell_Born": 5.55471,
+   "L_over_ell": 28.80438,
+   "g_Lmax": 10.5032,
+   "slope_lnL": 3.77074,
+   "slope_err": 0.28752,
+   "lng_drop": 0.20195,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.27191,
+   "rho0_excess": 0.2717,
+   "zero_levels_torus": 3.25,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 2.0,
+   "ell_Born": 3.12452,
+   "L_over_ell": 51.20779,
+   "g_Lmax": 6.07133,
+   "slope_lnL": 1.21149,
+   "slope_err": 0.2397,
+   "lng_drop": 0.10899,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.35666,
+   "rho0_excess": 0.35645,
+   "zero_levels_torus": 5.0,
+   "label": "thermal metal"
+  },
+  {
+   "point": "P4",
+   "w": 4.0,
+   "U": 3.0,
+   "ell_Born": 1.38868,
+   "L_over_ell": 115.21752,
+   "g_Lmax": 3.80602,
+   "slope_lnL": 0.23294,
+   "slope_err": 0.16479,
+   "lng_drop": 0.03075,
+   "f_Q": 0.0,
+   "Q_mode": 1.0,
+   "rho0": 0.50092,
+   "rho0_excess": 0.50071,
+   "zero_levels_torus": 5.25,
+   "label": "thermal metal"
+  }
+ ],
+ "dos_check": {
+  "kpm_resolution": 0.02767174367432745,
+  "delta_G": 0.16299628294932827,
+  "resolved": true,
+  "rho_base": 0.00021135540073799337
+ },
+ "verdict": {
+  "gapped, quantized": [
+   [
+    "G",
+    0.0
+   ],
+   [
+    "G",
+    0.25
+   ],
+   [
+    "G",
+    0.5
+   ],
+   [
+    "G",
+    1.0
+   ],
+   [
+    "G",
+    1.5
+   ]
+  ],
+  "GAPLESS BUT QUANTIZED (pockets)": [],
+  "gapless (disorder tails), quantized": [
+   [
+    "G",
+    2.0
+   ]
+  ],
+  "thermal metal": [
+   [
+    "G",
+    3.0
+   ],
+   [
+    "P1",
+    1.5
+   ],
+   [
+    "P1",
+    2.0
+   ],
+   [
+    "P1",
+    3.0
+   ],
+   [
+    "P2",
+    0.5
+   ],
+   [
+    "P2",
+    1.0
+   ],
+   [
+    "P2",
+    1.5
+   ],
+   [
+    "P2",
+    2.0
+   ],
+   [
+    "P2",
+    3.0
+   ],
+   [
+    "P3",
+    0.5
+   ],
+   [
+    "P3",
+    1.0
+   ],
+   [
+    "P3",
+    1.5
+   ],
+   [
+    "P3",
+    2.0
+   ],
+   [
+    "P3",
+    3.0
+   ],
+   [
+    "P4",
+    0.5
+   ],
+   [
+    "P4",
+    1.0
+   ],
+   [
+    "P4",
+    1.5
+   ],
+   [
+    "P4",
+    2.0
+   ],
+   [
+    "P4",
+    3.0
+   ]
+  ],
+  "localized, other integer": [],
+  "clean ballistic (H3)": [
+   [
+    "P1",
+    0.0
+   ],
+   [
+    "P2",
+    0.0
+   ],
+   [
+    "P3",
+    0.0
+   ],
+   [
+    "P4",
+    0.0
+   ]
+  ],
+  "quasi-ballistic (L < 3 l)": [
+   [
+    "P1",
+    0.25
+   ],
+   [
+    "P2",
+    0.25
+   ],
+   [
+    "P3",
+    0.25
+   ],
+   [
+    "P4",
+    0.25
+   ]
+  ],
+  "crossover": [
+   [
+    "P1",
+    0.5
+   ],
+   [
+    "P1",
+    1.0
+   ]
+  ]
+ },
+ "finite_T": {
+  "G|U=0.5|L=64": [
+   6.172855355040441e-06,
+   0.018820610181285218,
+   3.6932721891387517
+  ],
+  "G|U=0.5|L=128": [
+   7.225063606617513e-13,
+   0.028363479610562164,
+   5.771251262100195
+  ],
+  "P1|U=0.5|L=64": [
+   1.1741630213822785,
+   1.5878729774932245,
+   5.5592040274136405
+  ],
+  "P1|U=0.5|L=128": [
+   2.329803540823703,
+   3.2164121141241893,
+   9.143954191323973
+  ],
+  "P1|U=1.5|L=64": [
+   1.419731212757063,
+   1.7299644417861013,
+   2.9034372833228765
+  ],
+  "P1|U=1.5|L=128": [
+   1.8832996694959385,
+   2.4304067663676294,
+   3.4719705908417127
+  ],
+  "P2|U=1.0|L=64": [
+   3.6389163825653164,
+   3.6426149003179384,
+   4.350208654007241
+  ],
+  "P2|U=1.0|L=128": [
+   6.734814191336267,
+   6.156773260546884,
+   5.9360686741241215
+  ],
+  "P3|U=1.0|L=64": [
+   6.864936752989344,
+   6.199906982194573,
+   5.211259278484983
+  ],
+  "P3|U=1.0|L=128": [
+   11.127965300803924,
+   10.148864661037633,
+   7.029920125972776
+  ]
+ },
+ "walls": "{('erased (uniform)', 0.0): 0.0077, ('erased (uniform)', 0.5): 0.0086, ('erased (uniform)', 1.0): 0.0132, ('normal strip (2)', 0.0): 4.2895, ('normal strip (2)', 0.5): 4.2367, ('normal strip (2)', 1.0): 4.1209, ('normal strip (4)', 0.0): 4.7136, ('normal strip (4)', 0.5): 4.4792, ('normal strip (4)', 1.0): 4.2025, ('sharp wall', 0.0): 4.0062, ('sharp wall', 0.5): 4.008, ('sharp wall', 1.0): 4.02, ('suppressed pairing (3, 0.3)', 0.0): 4.0684, ('suppressed pairing (3, 0.3)', 0.5): 4.0884, ('suppressed pairing (3, 0.3)', 1.0): 4.1189}",
+ "contacts": [
+  {
+   "contact": "metal leads, buffer 2",
+   "T_wall": 3.9999,
+   "deviation_from_4": -0.0001
+  },
+  {
+   "contact": "metal leads, buffer 6",
+   "T_wall": 3.99994,
+   "deviation_from_4": -6e-05
+  },
+  {
+   "contact": "chain leads t=0.5",
+   "T_wall": 3.82554,
+   "deviation_from_4": -0.17446
+  },
+  {
+   "contact": "chain leads t=1",
+   "T_wall": 3.98102,
+   "deviation_from_4": -0.01898
+  },
+  {
+   "contact": "chain leads t=2",
+   "T_wall": 3.99872,
+   "deviation_from_4": -0.00128
+  }
+ ],
+ "textures": {
+  "slopes": {
+   "frac=0.5|ell=3.0": [
+    -0.03538835198601123,
+    0.404468041808647
+   ],
+   "frac=0.5|ell=6.0": [
+    -0.40886297802878213,
+    0.7056951936580889
+   ],
+   "frac=0.25|ell=3.0": [
+    -0.25817217363006434,
+    0.20329058388752314
+   ],
+   "frac=0.25|ell=6.0": [
+    -0.09956246420796504,
+    0.0772126069052846
+   ]
+  },
+  "g_by_L": "{(0.25, 3.0, 24): 1.4661, (0.25, 3.0, 40): 0.6788, (0.25, 3.0, 64): 0.3813, (0.25, 3.0, 96): 0.3112, (0.25, 3.0, 128): 0.1982, (0.25, 6.0, 24): 1.1023, (0.25, 6.0, 40): 0.4476, (0.25, 6.0, 64): 0.1011, (0.25, 6.0, 96): 0.1167, (0.25, 6.0, 128): 0.0254, (0.5, 3.0, 24): 3.5818, (0.5, 3.0, 40): 2.8226, (0.5, 3.0, 64): 2.7339, (0.5, 3.0, 96): 2.7528, (0.5, 3.0, 128): 2.7053, (0.5, 6.0, 24): 2.4113, (0.5, 6.0, 40): 2.0865, (0.5, 6.0, 64): 2.1372, (0.5, 6.0, 96): 1.9935, (0.5, 6.0, 128): 1.8512}"
+ },
+ "units": {
+  "assumptions": {
+   "Tc_K": 0.3,
+   "xi_nm": 15.3
+  },
+  "eps0_meV": 0.17181462497966682,
+  "a_eff_nm": 1.5437029960729884,
+  "xi_model": 9.911232950199311
+ },
+ "files": [
+  "calibration_g.csv",
+  "classification.csv",
+  "figures/B1_kernel_bridge.pdf",
+  "figures/B2_kpm_bridge.pdf",
+  "figures/C1_calibration.pdf",
+  "figures/D1_g_scaling.pdf",
+  "figures/D2_Q_bott_dos.pdf",
+  "figures/D3_phase_diagram.pdf",
+  "figures/E1_temperature.pdf",
+  "figures/E2_dephasing_illustration.pdf",
+  "figures/F1_domain_walls.pdf",
+  "figures/F2_textures.pdf",
+  "figures/M1_model_pockets.pdf",
+  "main_Q.csv",
+  "main_bott.csv",
+  "main_dos0.csv",
+  "main_g.csv",
+  "points_kspace.csv",
+  "textures_g.csv",
+  "walls.csv"
+ ]
+}
